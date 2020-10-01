@@ -1,15 +1,36 @@
+import java.util.Scanner;
+
 /**
- *
- * @author 
+ * Figures what the maximum integer is.
+ * @author Thomas Quigley
  */
 public class Main {
-
-  /**
-   * The method that is executed when you hit the run button.
-   * @param args the command line arguments
-   */
   public static void main(String[] args) {
-    // TODO code application logic here
-    
+    Scanner input = new Scanner(System.in);
+    // get the users three integers
+    System.out.println("Please enter three integers on separate lines");
+    int numberOne = input.nextInt();
+    int numberTwo = input.nextInt();
+    int numberThree = input.nextInt();
+   
+    // intilize the biggest variable
+    int biggest;
+
+    // figure out if what number is biggest
+    if (numberOne >= numberTwo && numberOne >= numberThree) {
+      // numberOne is the biggest
+      biggest = numberOne;
+
+    } else if (numberTwo >= numberOne && numberTwo >= numberThree) {
+      // numberTwo is the biggest
+      biggest = numberTwo;
+
+    } else {
+      // numberThree is the biggest
+      biggest = numberThree;
+
+    }
+    // tell them what the maximum number is
+    System.out.println("Maximum: " + biggest);
   }
 }
